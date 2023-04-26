@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Webpage</title>
+  </head>
+  <body>
+    <h1>Nutrition Tracker</h1>
+    <form onsubmit="return handleSubmit(event)">
+      <label for="calories">Calories:</label>
+      <input type="number" id="caloriesInput" name="calories"><br><br>
+      <label for="fiber">Fiber:</label>
+      <input type="number" id="fiberInput" name="fiber"><br><br>
+      <label for="protein">Protein:</label>
+      <input type="number" id="proteinInput" name="protein"><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+      function handleSubmit(event) {
+        // Prevent the form from submitting and refreshing the page
+        event.preventDefault();
+
+        // Get the input values and save them into variables
+        const calories = Number(document.getElementById("caloriesInput").value);
+        const fiber = Number(document.getElementById("fiberInput").value);
+        const protein = Number(document.getElementById("proteinInput").value);
+
+        // Use the variables in any formulas or calculations you need
+        console.log("Calories:", calories);
+        console.log("Fiber:", fiber);
+        console.log("Protein:", protein);
+
+        // You can also save the variables into global variables or send them to a server using AJAX
+      }
+    </script>
+  </body>
+</html>
